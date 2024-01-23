@@ -2,17 +2,18 @@ name: build-and-deploy-users
 
 on:
   push:
-    branches: [ "master" ]
+    branches:
+        - master
     paths:
-      - 'mfmonorepo/users/**'
+      - 'users/**'
   # pull_request:
   #   branches: [ "master" ]
   #   paths:
-  #     - 'mfmonorepo/users/**'
+  #     - 'users/**'
 
 defaults:
   run:
-    working-directory: mfmonorepo/users
+    working-directory: users
 
 jobs:
   build:
