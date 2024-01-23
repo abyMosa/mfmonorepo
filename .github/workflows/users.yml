@@ -7,9 +7,9 @@ on:
     paths:
       - 'users/**'
 
-# defaults:
-#   run:
-#     working-directory: users
+defaults:
+  run:
+    working-directory: users
 
 jobs:
   build:
