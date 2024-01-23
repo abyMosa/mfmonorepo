@@ -1,15 +1,15 @@
 import React from 'react';
 import Users from './Users';
+import { Container, Row, Logo, LogoType } from '@abymosa/develm-sg'
 
 const App = () => {
   return (
-    <div>
-      <h1> app component </h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus cum, nam cupiditate cumque voluptas natus assumenda sunt delectus quam aperiam earum obcaecati at explicabo corrupti ex accusamus. Cum, expedita inventore.</p>
-      <hr />
-
+    <Container className='px-5 pb-5'>
+      <Row className='pt-6 df f-jc-center'>
+        <Logo type={LogoType.TEXT} text='AWS mfe Demo' />
+      </Row>
       <Users />
-    </div>
+    </Container>
   );
 };
 
