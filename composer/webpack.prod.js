@@ -4,13 +4,12 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const packageJson = require('./package.json');
 
 const domain = process.env.PRODUCTION_DOMAIN;
-// console.log('domain', domain);
 
 const devConfig = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
-    publicPath: '/users/latest/'
+    publicPath: '/composer/latest/'
   },
   plugins: [
     new ModuleFederationPlugin({
