@@ -15,7 +15,7 @@ const devConfig = {
     new ModuleFederationPlugin({
       name: 'composer',
       remotes: {
-        users: `users@${domain}/users/latest/remoteEntry.js`
+        users: `users@https://d2gbu0ggj5rc67.cloudfront.net/users/latest/remoteEntry.js`
       },
       shared: packageJson.dependencies
     })
