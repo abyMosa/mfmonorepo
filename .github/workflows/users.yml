@@ -5,14 +5,14 @@ on:
     branches: [ "master" ]
     paths:
       - 'mfmonorepo/users/**'
-  pull_request:
-    branches: [ "master" ]
-    paths:
-      - 'mfmonorepo/users/**'
+  # pull_request:
+  #   branches: [ "master" ]
+  #   paths:
+  #     - 'mfmonorepo/users/**'
 
 defaults:
   run:
-    working-directory: 'mfmonorepo/users'
+    working-directory: mfmonorepo/users
 
 jobs:
   build:
