@@ -4,18 +4,19 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const packageJson = require('./package.json');
 
 const domain = process.env.PRODUCTION_DOMAIN;
+// console.log('domain', domain);
 
 const devConfig = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
-    publicPath: '/composer/latest/'
+    publicPath: '/users/latest/'
   },
   plugins: [
     new ModuleFederationPlugin({
       name: 'composer',
       remotes: {
-        users: `users@https://d2gbu0ggj5rc67.cloudfront.net/users/latest/remoteEntry.js`
+        users: `users@${domain}/users/latest/remoteEntry.js`
       },
       shared: packageJson.dependencies
     })
