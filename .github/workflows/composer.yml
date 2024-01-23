@@ -17,6 +17,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - run: echo //npm.pkg.github.com/:_authToken=${{secrets.NPMRC_TOKEN}} > ~/.npmrc
+        env:
+          NPMRC_TOKEN: ${{secrets.NPMRC_TOKEN}}
       - run: npm install
       - run: npm run build
         env:

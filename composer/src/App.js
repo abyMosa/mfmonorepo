@@ -7,6 +7,7 @@ const App = () => {
     <Container className='px-5 pb-5'>
       <Row className='pt-6 df f-jc-center'>
         <Logo type={LogoType.TEXT} text='AWS mfe Demo' />
+
       </Row>
       <Users />
     </Container>

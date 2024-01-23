@@ -26,7 +26,6 @@ const App = () => {
 
   return (
     <div className="App">
-
       <Row className='p-5'>
         <Col md12>
           <h2>Users</h2>
